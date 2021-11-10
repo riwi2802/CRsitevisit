@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org/"></html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <script>
+
+        window.addEventListener("load", function() {
+
+
+
+            let inputLine = document.getElementById("row1");
+
+            let col1 = document.getElementById("col1")
+            let col2 = document.getElementById("col2")
+            let col3 = document.getElementById("col3")
+            let col4 = document.getElementById("col4")
+            let col5 = document.getElementById("col5")
+
+
+            let addLineButton = document.getElementById("addLine");
+
+
+            let i = 1
+
+            addLineButton.addEventListener("click", function (event) {
+                console.log("HELLO")
+
+                    modNumField = document.createElement("input");
+                    modNumField.type = "text";
+                    modNumField.className = "form-control";
+                    modNumField.name = "modNumLine" + i;
+
+                    roomField = document.createElement("input");
+                    roomField.type = "text";
+                    roomField.className = "form-control";
+                    roomField.name = "roomLine" + i;
+
+                    descriptionField = document.createElement("input");
+                    descriptionField.type = "text";
+                    descriptionField.className = "form-control";
+                    descriptionField.name = "descriptionLine" + i;
+
+                    commentsField = document.createElement("input");
+                    commentsField.type = "text";
+                    commentsField.className = "form-control";
+                    commentsField.name = "commentsLine" + i;
+
+                    actionField = document.createElement("input");
+                    actionField.type = "text";
+                    actionField.className = "form-control";
+                    actionField.name = "actionLine" + i;
+
+
+                    col1.appendChild(modNumField);
+
+                    col2.appendChild(roomField);
+
+                    col3.appendChild(descriptionField);
+
+                    col4.appendChild(commentsField);
+
+                    col5.appendChild(actionField);
+
+                    i++
+
+            });
+        });
+    </script>
+    <title>Site Visit</title>
+</head>
+
+<body>
+
+<h2 class="text-center text-muted">Consolidated Rail Corporation</h2>
+<h1 class="text-center">INFORMATION AND COMMUNICATION SYSTEMS INSPECTION</h1>
+
+<div th:replace="fragments :: navigation"></div>
+
+<div class="input-group mb-3 ">
+    <div class="form-check">
+        <form>
+            <div class="mb-3">
+                <label class="form-label">Date:</label><input class="form-control" type="date" name="date">
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Department:</label><input class="form-control" type="text" name="department">
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Location:</label><input class="form-control" type="text" name="location">
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Sub-Location:</label><input class="form-control" type="text" name="subLocation">
+            </div>
+        </form>
+    </div>
+</div>
+
+<div class="form-check form-check">
+    <!-- need to work out spacing of these  -->
+    <input class="form-check-inline" type="checkbox" name="hardware"><label class="form-check-label">Hardware</label>
+    <input class="form-check-inline" type="checkbox" name="software"><label class="form-check-label">Software</label>
+    <input class="form-check-inline" type="checkbox" name="security"><label class="form-check-label">Security</label>
+    <input class="form-check-inline" type="checkbox" name="generalMaintenance"><label class="form-check-label">General Maintenance</label>
+</div>
+
+<br>
+
+<br>
+
+<h3 class="text-center"></h3>
+<div>
+    <div class="container" id="row1">
+        <div class="row">
+            <div class="col" id="col1">
+                <label class="form-label font-weight-bold">Model/Serial #</label><input class="form-control" type="text" name="modNum" id="modNum">
+            </div>
+            <div class="col" id="col2">
+                <label class="form-label font-weight-bold">Room</label><input class="form-control" type="text" name="room" id="room">
+            </div>
+            <div class="col" id="col3">
+                <label class="form-label font-weight-bold">Item Description</label><input class="form-control" type="text" name="description" id="description">
+            </div>
+            <div class="col" id="col4">
+                <label class="form-label font-weight-bold">Issue / Comments</label><input class="form-control" type="text" name="comments" id="comments">
+            </div>
+            <div class="col" id="col5">
+                <label class="form-label font-weight-bold">Action</label><input class="form-control" type="text" name="action" id="action">
+            </div>
+        </div>
+    </div>
+</div>
+
+<br>
+
+<div class="text-center">
+    <input type="button" value="Add new line" class="align-self-center" id="addLine">
+</div>
+
+<br>
+
+<div class="text-center">
+    <input type="submit" value="Submit" class="text-center">
+</div>
+
+</form>
+
+</div>
+
+</body>
+</html>
