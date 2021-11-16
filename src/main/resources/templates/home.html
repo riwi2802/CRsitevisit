@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="https://www.thymeleaf.org/">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
+<head th:replace="fragments :: head"></head>
 <body>
+
+
+<div th:replace="fragments :: navigation"></div>
+
+<div th:replace="fragments :: title"></div>
 
 <p>this will be the home page</p>
 
 <a th:href="@{/home/add}">Add new visit</a>
-
-<div th:replace="fragments :: navigation"></div>
 
 </body>
 </html>

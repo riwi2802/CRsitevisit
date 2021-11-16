@@ -1,13 +1,32 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="https://www.thymeleaf.org/">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
+<head th:replace="fragments :: head"></head>
 <body>
 
 <div th:replace="fragments :: navigation"></div>
 
-<p>the list of all forms will be placed here</p>
+<h1>All Site Visits</h1>
+
+<table class="table table-striped">
+    <thead>
+    <tr>
+        <th>ID:</th>
+        <th>Date:</th>
+        <th>Location:</th>
+        <th>Sub-Location:</th>
+        <th>Show All Information:</th>
+    </tr>
+    </thead>
+    <tr th:each="SiteVisit : ${SiteVisits}">
+        <td th:text="${SiteVisit.id}"></td>
+        <td th:text="${SiteVisit.date}"></td>
+        <td th:text="${SiteVisit.location}"></td>
+        <td th:text="${SiteVisit.subLocation}"></td>
+        <td><a th:href="@{/home/display/{id}(id=${SiteVisit.id})}" class="nav-link px-2 text-blue">Click Here</a></td>
+        <td></td>
+    </tr>
+</table>
+
+
 </body>
 </html>

@@ -1,18 +1,37 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="https://www.thymeleaf.org/">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+<head th:fragment="head">
+    <meta charset="UTF-8"/>
+    <title>Coding Events</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
 </head>
 <body>
 
-<div th:fragment="navigation">
-    <ul>
-        <li><a th:href="@{/home}">Home</a></li>
-        <li><a th:href="@{/home/list}">List</a></li>
-        <li><a th:href="@{/home/add}">Add</a></li>
-    </ul>
+
+
+
+<div th:fragment="title">
+    <br>
+    <h2 class="text-center text-muted">Consolidated Rail Corporation</h2>
+    <h1 class="text-center">INFORMATION AND COMMUNICATION SYSTEMS INSPECTION</h1>
 </div>
+
+
+<header th:fragment="navigation" class="p-3 bg-dark text-white">
+    <div class="container">
+        <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+            <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+                <li><a th:href="@{/home}" class="nav-link px-2 text-secondary">Home</a></li>
+                <li><a th:href="@{/home/list}" class="nav-link px-2 text-white">List All Site Visits</a></li>
+                <li><a th:href="@{/home/add}" class="nav-link px-2 text-white">Add A New Site Visit</a></li>
+            </ul>
+
+        </div>
+    </div>
+</header>
+
+
 
 </body>
 </html>

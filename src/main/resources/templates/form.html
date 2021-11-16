@@ -29,7 +29,7 @@
 
                     modNumField = document.createElement("input");
                     modNumField.type = "text";
-                    modNumField.className = "form-control";
+                    modNumField.className = "mm-control";
                     modNumField.name = "modNumLine" + i;
 
                     roomField = document.createElement("input");
@@ -73,14 +73,15 @@
 
 <body>
 
-<h2 class="text-center text-muted">Consolidated Rail Corporation</h2>
-<h1 class="text-center">INFORMATION AND COMMUNICATION SYSTEMS INSPECTION</h1>
 
 <div th:replace="fragments :: navigation"></div>
 
+<br>
+<br>
+
+<form method="post">
 <div class="input-group mb-3 ">
     <div class="form-check">
-        <form>
             <div class="mb-3">
                 <label class="form-label">Date:</label><input class="form-control" type="date" name="date">
             </div>
@@ -93,16 +94,16 @@
             <div class="mb-3">
                 <label class="form-label">Sub-Location:</label><input class="form-control" type="text" name="subLocation">
             </div>
-        </form>
     </div>
 </div>
 
-<div class="form-check form-check">
+
+    <div class="form-check form-check">
     <!-- need to work out spacing of these  -->
-    <input class="form-check-inline" type="checkbox" name="hardware"><label class="form-check-label">Hardware</label>
-    <input class="form-check-inline" type="checkbox" name="software"><label class="form-check-label">Software</label>
-    <input class="form-check-inline" type="checkbox" name="security"><label class="form-check-label">Security</label>
-    <input class="form-check-inline" type="checkbox" name="generalMaintenance"><label class="form-check-label">General Maintenance</label>
+    <input class="form-check-inline" type="checkbox" name="hardware" value="true"><input type="hidden" name="hardware" value="false"><label class="form-check-label">Hardware</label>
+       <input class="form-check-inline" type="checkbox" name="software" value="true"> <input type="hidden" name="software" value="false"><label class="form-check-label">Software</label>
+        <input class="form-check-inline" type="checkbox" name="security" value="true"><input class="form-check-inline" type="hidden" name="security" value="false"><label class="form-check-label">Security</label>
+        <input class="form-check-inline" type="checkbox" name="generalMaintenance" value="true"><input class="form-check-inline" type="hidden" name="generalMaintenance" value="false"><label class="form-check-label">General Maintenance</label>
 </div>
 
 <br>
