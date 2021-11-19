@@ -8,29 +8,139 @@
 <div th:replace="fragments :: navigation"></div>
 
 
-<table class="table table-striped ">
-    <thead>
-    <tr>
-        <th>date</th>
-        <th>department</th>
-        <th>location</th>
-        <th>sub-location</th>
-        <th>hardware</th>
-        <th>software</th>
-        <th>security</th>
-        <th>general maintenance</th>
-        <th>model/serial#</th>
-        <th>room</th>
-        <th>item description</th>
-        <th>issue / comments </th>
-        <th>action</th>
-    </tr>
-    </thead>
-    <tr>
-        <td th:text="${date}"></td>
-    </tr>
-</table>
+<form method="post">
+    <div class="input-group mb-3 ">
+        <div class="form-check">
+            <div class="mb-3">
+                <label class="form-label">Date:</label><input th:value="${date}" class="form-control" type="date" name="date">
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Department:</label><input th:value="${department}" class="form-control" type="text" name="department">
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Location:</label><input th:value="${location}" class="form-control" type="text" name="location">
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Sub-Location:</label><input th:value="${subLocation}" class="form-control" type="text" name="subLocation">
+            </div>
+        </div>
+    </div>
 
+
+    <div class="form-check form-check">
+        <!-- need to work out spacing of these  -->
+        <input  class="form-check-inline" type="checkbox" name="hardware" value="true" th:checked="${hardware}"><input type="hidden" name="hardware" value="false"><label class="form-check-label">Hardware</label>
+        <input class="form-check-inline" type="checkbox" name="software" value="true" th:checked="${software}"> <input type="hidden" name="software" value="false"><label class="form-check-label">Software</label>
+        <input class="form-check-inline" type="checkbox" name="security" value="true" th:checked="${security}"><input class="form-check-inline" type="hidden" name="security" value="false"><label class="form-check-label">Security</label>
+        <input class="form-check-inline" type="checkbox" name="generalMaintenance" value="true" th:checked="${generalMaintenance}"><input class="form-check-inline" type="hidden" name="generalMaintenance" value="false"><label class="form-check-label">General Maintenance</label>
+    </div>
+
+    <br>
+
+    <br>
+
+    <h3 class="text-center"></h3>
+    <div>
+        <div class="container" id="row1">
+            <div class="row">
+                <div class="col" id="col1">
+                    <label class="form-label font-weight-bold">Model/Serial #</label><input class="form-control" type="text" name="modNum" id="modNum" th:value="${modNum}">
+                    <input class="form-control" type="text" name="modNum1" id="modNum1" th:value="${modNum1}">
+                    <input class="form-control" type="text" name="modNum2" id="modNum2" th:value="${modNum2}">
+                    <input class="form-control" type="text" name="modNum3" id="modNum3" th:value="${modNum3}">
+                    <input class="form-control" type="text" name="modNum4" id="modNum4" th:value="${modNum4}">
+                    <input class="form-control" type="text" name="modNum5" id="modNum5" th:value="${modNum5}">
+                    <input class="form-control" type="text" name="modNum6" id="modNum6" th:value="${modNum6}">
+                    <input class="form-control" type="text" name="modNum7" id="modNum7" th:value="${modNum7}">
+                    <input class="form-control" type="text" name="modNum8" id="modNum8" th:value="${modNum8}">
+                    <input class="form-control" type="text" name="modNum9" id="modNum9" th:value="${modNum9}">
+                    <input class="form-control" type="text" name="modNum10" id="modNum10" th:value="${modNum10}">
+                    <input class="form-control" type="text" name="modNum11" id="modNum11" th:value="${modNum11}">
+                    <input class="form-control" type="text" name="modNum12" id="modNum12"th:value="${modNum12}">
+                    <input class="form-control" type="text" name="modNum13" id="modNum13" th:value="${modNum13}">
+                    <input class="form-control" type="text" name="modNum14" id="modNum14" th:value="${modNum14}">
+                </div>
+                <div class="col" id="col2">
+                    <label class="form-label font-weight-bold">Room</label><input class="form-control" type="text" name="room" id="room" th:value="${room}">
+                    <input class="form-control" type="text" name="room1" id="room1" th:value="${room1}">
+                    <input class="form-control" type="text" name="room2" id="room2" th:value="${room2}">
+                    <input class="form-control" type="text" name="room3" id="room3" th:value="${room3}">
+                    <input class="form-control" type="text" name="room4" id="room4" th:value="${room4}">
+                    <input class="form-control" type="text" name="room5" id="room5" th:value="${room5}">
+                    <input class="form-control" type="text" name="room6" id="room6" th:value="${room6}">
+                    <input class="form-control" type="text" name="room7" id="room7" th:value="${room7}">
+                    <input class="form-control" type="text" name="room8" id="room8" th:value="${room8}">
+                    <input class="form-control" type="text" name="room9" id="room9" th:value="${room9}">
+                    <input class="form-control" type="text" name="room10" id="room10" th:value="${room10}">
+                    <input class="form-control" type="text" name="room11" id="room11" th:value="${room11}">
+                    <input class="form-control" type="text" name="room12" id="room12"th:value="${room12}">
+                    <input class="form-control" type="text" name="room13" id="room13" th:value="${room13}">
+                    <input class="form-control" type="text" name="room14" id="room14" th:value="${room14}">
+                </div>
+                <div class="col" id="col3">
+                    <label class="form-label font-weight-bold">Item Description</label><input class="form-control" type="text" name="description" id="description" th:value="${description}">
+                    <input class="form-control" type="text" name="description1" id="description1" th:value="${description1}">
+                    <input class="form-control" type="text" name="description2" id="description2" th:value="${description2}">
+                    <input class="form-control" type="text" name="description3" id="description3" th:value="${description3}">
+                    <input class="form-control" type="text" name="description4" id="description4" th:value="${description4}">
+                    <input class="form-control" type="text" name="description5" id="description5" th:value="${description5}">
+                    <input class="form-control" type="text" name="description6" id="description6" th:value="${description6}">
+                    <input class="form-control" type="text" name="description7" id="description7" th:value="${description7}">
+                    <input class="form-control" type="text" name="description8" id="description8" th:value="${description8}">
+                    <input class="form-control" type="text" name="description9" id="description9" th:value="${description9}">
+                    <input class="form-control" type="text" name="description10" id="description10" th:value="${description10}">
+                    <input class="form-control" type="text" name="description11" id="description11" th:value="${description11}">
+                    <input class="form-control" type="text" name="description12" id="description12"th:value="${description12}">
+                    <input class="form-control" type="text" name="description13" id="description13" th:value="${description13}">
+                    <input class="form-control" type="text" name="description14" id="description14" th:value="${description14}">
+                </div>
+                <div class="col" id="col4">
+                    <label class="form-label font-weight-bold">Issue / Comments</label><input class="form-control" type="text" name="comments" id="comments" th:value="${comments}">
+                    <input class="form-control" type="text" name="comments1" id="comments1" th:value="${comments1}">
+                    <input class="form-control" type="text" name="comments2" id="comments2" th:value="${comments2}">
+                    <input class="form-control" type="text" name="comments3" id="comments3" th:value="${comments3}">
+                    <input class="form-control" type="text" name="comments4" id="comments4" th:value="${comments4}">
+                    <input class="form-control" type="text" name="comments5" id="comments5" th:value="${comments5}">
+                    <input class="form-control" type="text" name="comments6" id="comments6" th:value="${comments6}">
+                    <input class="form-control" type="text" name="comments7" id="comments7" th:value="${comments7}">
+                    <input class="form-control" type="text" name="comments8" id="comments8" th:value="${comments8}">
+                    <input class="form-control" type="text" name="comments9" id="comments9" th:value="${comments9}">
+                    <input class="form-control" type="text" name="comments10" id="comments10" th:value="${comments10}">
+                    <input class="form-control" type="text" name="comments11" id="comments11" th:value="${comments11}">
+                    <input class="form-control" type="text" name="comments12" id="comments12"th:value="${comments12}">
+                    <input class="form-control" type="text" name="comments13" id="comments13" th:value="${comments13}">
+                    <input class="form-control" type="text" name="comments14" id="comments14" th:value="${comments14}">
+                </div>
+                <div class="col" id="col5">
+                    <label class="form-label font-weight-bold">Action</label><input class="form-control" type="text" name="action" id="action" th:value="${action}">
+                    <input class="form-control" type="text" name="action1" id="action1" th:value="${action1}">
+                    <input class="form-control" type="text" name="action2" id="action2" th:value="${action2}">
+                    <input class="form-control" type="text" name="action3" id="action3" th:value="${action3}">
+                    <input class="form-control" type="text" name="action4" id="action4" th:value="${action4}">
+                    <input class="form-control" type="text" name="action5" id="action5" th:value="${action5}">
+                    <input class="form-control" type="text" name="action6" id="action6" th:value="${action6}">
+                    <input class="form-control" type="text" name="action7" id="action7" th:value="${action7}">
+                    <input class="form-control" type="text" name="action8" id="action8" th:value="${action8}">
+                    <input class="form-control" type="text" name="action9" id="action9" th:value="${action9}">
+                    <input class="form-control" type="text" name="action10" id="action10" th:value="${action10}">
+                    <input class="form-control" type="text" name="action11" id="action11" th:value="${action11}">
+                    <input class="form-control" type="text" name="action12" id="action12"th:value="${action12}">
+                    <input class="form-control" type="text" name="action13" id="action13" th:value="${action13}">
+                    <input class="form-control" type="text" name="action14" id="action14" th:value="${action14}">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+<!--    <div class="text-center">-->
+<!--        <input type="submit" value="Submit" class="text-center">-->
+<!--    </div>-->
+
+</form>
+
+</div>
 
 </body>
 </html>
