@@ -25,4 +25,6 @@ public class SiteVisitData {
     public static void remove(int id) {
         SiteVisits.remove(id);
     }
+
+//    public static void save(SiteVisit siteVisit){SiteVisits.replace(siteVisit.getId(), siteVisit);}
 }

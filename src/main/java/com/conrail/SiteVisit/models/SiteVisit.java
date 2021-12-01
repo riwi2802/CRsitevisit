@@ -1,124 +1,264 @@
 package com.conrail.SiteVisit.models;
 
 
-//import javax.persistence.Entity;
-//import javax.persistence.GeneratedValue;
-//import javax.persistence.Id;
-//import java.sql.Date;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import java.sql.Date;
 import java.util.Objects;
 
-//@Entity
+@Entity
 public class SiteVisit {
 
-//    @Id
-//    @GeneratedValue
-//    private int id;
-
+    @Id
+    @GeneratedValue
     private int id;
-    private static int nextId = 1;
 
+    @Column(length = 20)
     private String date;
+
+    @Column(length = 20)
     private String department;
+
+    @Column(length = 20)
     private String location;
+
+    @Column(length = 20)
     private String subLocation;
 
+    @Column(length = 20)
     private boolean hardware;
+
+    @Column(length = 20)
     private boolean software;
+
+    @Column(length = 20)
     private boolean security;
+
+    @Column(length = 20)
     private boolean generalMaintenance;
 
+    @Column(length = 50)
     private String modNum;
+    @Column(length = 50)
     private String room;
+    @Column(length = 50)
     private String description;
+    @Column(length = 50)
     private String comments;
+    @Column(length = 50)
     private String action;
 
+    @Column(length = 50)
     private String modNum1;
+
+    @Column(length = 50)
     private String room1;
+
+    @Column(length = 50)
     private String description1;
+
+    @Column(length = 50)
     private String comments1;
+
+    @Column(length = 50)
     private String action1;
 
+    @Column(length = 50)
     private String modNum2;
+
+    @Column(length = 50)
     private String room2;
+
+    @Column(length = 50)
     private String description2;
+
+    @Column(length = 50)
     private String comments2;
+
+    @Column(length = 50)
     private String action2;
 
     private String modNum3;
+
+    @Column(length = 50)
     private String room3;
+
+    @Column(length = 50)
     private String description3;
+
+    @Column(length = 50)
     private String comments3;
+
+    @Column(length = 50)
     private String action3;
 
+    @Column(length = 50)
     private String modNum4;
+
+    @Column(length = 50)
     private String room4;
+
+    @Column(length = 50)
     private String description4;
+
+    @Column(length = 50)
     private String comments4;
+
+    @Column(length = 50)
     private String action4;
 
+    @Column(length = 50)
     private String modNum5;
+
+    @Column(length = 50)
     private String room5;
+
+    @Column(length = 50)
     private String description5;
+
+    @Column(length = 50)
     private String comments5;
+
+    @Column(length = 50)
     private String action5;
 
     private String modNum6;
+
+    @Column(length = 50)
     private String room6;
+
+    @Column(length = 50)
     private String description6;
+
+    @Column(length = 50)
     private String comments6;
+
+    @Column(length = 50)
     private String action6;
 
+    @Column(length = 50)
     private String modNum7;
+
+    @Column(length = 50)
     private String room7;
+
+    @Column(length = 50)
     private String description7;
+
+    @Column(length = 50)
     private String comments7;
+
+    @Column(length = 50)
     private String action7;
 
+    @Column(length = 50)
     private String modNum8;
+
+    @Column(length = 50)
     private String room8;
+
+    @Column(length = 50)
     private String description8;
+
+    @Column(length = 50)
     private String comments8;
+
+    @Column(length = 50)
     private String action8;
 
+    @Column(length = 50)
     private String modNum9;
+
+    @Column(length = 50)
     private String room9;
+
+    @Column(length = 50)
     private String description9;
+
+    @Column(length = 50)
     private String comments9;
+
+    @Column(length = 50)
     private String action9;
 
+    @Column(length = 50)
     private String modNum10;
+
+    @Column(length = 50)
     private String room10;
+
+    @Column(length = 50)
     private String description10;
+
+    @Column(length = 50)
     private String comments10;
+
+    @Column(length = 50)
     private String action10;
 
+    @Column(length = 50)
     private String modNum11;
+
+    @Column(length = 50)
     private String room11;
+
+    @Column(length = 50)
     private String description11;
+
+    @Column(length = 50)
     private String comments11;
+
+    @Column(length = 50)
     private String action11;
 
+    @Column(length = 50)
     private String modNum12;
+
+    @Column(length = 50)
     private String room12;
+
+    @Column(length = 50)
     private String description12;
+
+    @Column(length = 50)
     private String comments12;
+
+    @Column(length = 50)
     private String action12;
 
+    @Column(length = 50)
     private String modNum13;
+
+    @Column(length = 50)
     private String room13;
+
+    @Column(length = 50)
     private String description13;
+
+    @Column(length = 50)
     private String comments13;
+
+    @Column(length = 50)
     private String action13;
 
+    @Column(length = 50)
     private String modNum14;
+
+    @Column(length = 50)
     private String room14;
+
+    @Column(length = 50)
     private String description14;
+
+    @Column(length = 50)
     private String comments14;
+
+    @Column(length = 50)
     private String action14;
 
     public SiteVisit(String date, String department, String location, String subLocation, boolean hardware, boolean software, boolean security, boolean generalMaintenance, String modNum, String room, String description, String comments, String action, String modNum1, String room1, String description1, String comments1, String action1, String modNum2, String room2, String description2, String comments2, String action2, String modNum3, String room3, String description3, String comments3, String action3, String modNum4, String room4, String description4, String comments4, String action4, String modNum5, String room5, String description5, String comments5, String action5, String modNum6, String room6, String description6, String comments6, String action6, String modNum7, String room7, String description7, String comments7, String action7, String modNum8, String room8, String description8, String comments8, String action8, String modNum9, String room9, String description9, String comments9, String action9, String modNum10, String room10, String description10, String comments10, String action10, String modNum11, String room11, String description11, String comments11, String action11, String modNum12, String room12, String description12, String comments12, String action12, String modNum13, String room13, String description13, String comments13, String action13, String modNum14, String room14, String description14, String comments14, String action14) {
-        this.id = nextId;
         this.date = date;
         this.department = department;
         this.location = location;
@@ -202,12 +342,11 @@ public class SiteVisit {
         this.description14 = description14;
         this.comments14 = comments14;
         this.action14 = action14;
-        nextId++;
     }
 
-    /*
+
     public SiteVisit() {}
-*/
+
 
     public int getId() {
         return id;

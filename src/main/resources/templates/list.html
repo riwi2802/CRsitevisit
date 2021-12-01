@@ -14,7 +14,8 @@
         <th>Date:</th>
         <th>Location:</th>
         <th>Sub-Location:</th>
-        <th>Show All Information:</th>
+        <th>View / Update Information</th>
+        <th>Delete Entry:</th>
     </tr>
     </thead>
     <tr th:each="SiteVisit : ${SiteVisits}">
@@ -23,7 +24,10 @@
         <td th:text="${SiteVisit.location}"></td>
         <td th:text="${SiteVisit.subLocation}"></td>
         <td><a th:href="@{/home/display/{id}(id=${SiteVisit.id})}" class="nav-link px-2 text-blue">Click Here</a></td>
-        <td></td>
+        <td><form action="#" th:action="@{/home/delete/{id}(id=${SiteVisit.id})}" th:object="${SiteVisit}" method="post">
+            <input type="hidden" name="_method" value="Delete" ><input type="submit" value="Delete"
+                                                                       class="btn btn-danger"
+        ></form></td>
     </tr>
 </table>
 
