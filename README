@@ -1,0 +1,2 @@
+This program is a web application to aid Conrail's IT Department in taking inventory of IT Assets while visiting various company sites.
+It functions as a CRUD app utlizing Spring & MySQL.
